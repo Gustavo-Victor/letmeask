@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Button} from "./components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button />
+      <Button />
     </div>
   );
 }
 
 export default App;
+
+/*
+
+  function handlerOne(){
+    window.alert('Clicou no botão 1...');
+  }
+
+  function handlerTwo(){
+    window.alert('Clicou no botão 2...');
+  }
+
+  function handlerThree(){
+    window.alert('Clicou no botão 3 ou mais...');
+  }
+
+<Button text="Btn1" myHandler={handlerOne} />
+      <Button text="Btn2" myHandler={handlerTwo} />
+      <Button text="Btn3" myHandler={handlerThree} />
+      <Button myHandler={handlerThree} />
+*/
