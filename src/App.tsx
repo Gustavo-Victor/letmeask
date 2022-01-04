@@ -1,32 +1,20 @@
-import {Button} from "./components/Button";
+import { Home } from "./pages/Home";
+import { NewRoom } from "./pages/NewRoom";
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import {AuthContextProvider} from "./context/AuthContext";
 
 function App() {
   return (
-    <div>
-      <Button />
-      <Button />
-    </div>
+    <BrowserRouter>
+    <AuthContextProvider>
+      <Routes>          
+        <Route path="/" element={<Home />} />
+        <Route path="/rooms/new" element={<NewRoom/>} />          
+      </Routes>                    
+    </AuthContextProvider>      
+    </BrowserRouter>
+    
   );
 }
 
 export default App;
-
-/*
-
-  function handlerOne(){
-    window.alert('Clicou no botão 1...');
-  }
-
-  function handlerTwo(){
-    window.alert('Clicou no botão 2...');
-  }
-
-  function handlerThree(){
-    window.alert('Clicou no botão 3 ou mais...');
-  }
-
-<Button text="Btn1" myHandler={handlerOne} />
-      <Button text="Btn2" myHandler={handlerTwo} />
-      <Button text="Btn3" myHandler={handlerThree} />
-      <Button myHandler={handlerThree} />
-*/

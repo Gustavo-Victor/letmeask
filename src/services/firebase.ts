@@ -2,7 +2,7 @@
 
 import {initializeApp} from 'firebase/app';
 import {Database} from 'firebase/database';
-import {AuthCredential} from 'firebase/auth';
+import {GoogleAuthProvider, signInWithPopup, getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -18,11 +18,7 @@ initializeApp(firebaseConfig);
 
 //export const auth = firebase.auth();
 //export const database = firebase.database();
+const auth = getAuth();
 
-
-
-const database = Database;
-const auth = AuthCredential;
-
-export {database, auth};
+export {Database, GoogleAuthProvider, auth, signInWithPopup, onAuthStateChanged};
 
